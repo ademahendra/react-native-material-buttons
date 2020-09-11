@@ -23,7 +23,7 @@ export default class Button extends PureComponent {
     disableAnimationDuration: 225,
 
     disabled: false,
-    useNativeDriver: true,
+    // useNativeDriver: true,
   };
 
   static propTypes = {
@@ -43,7 +43,7 @@ export default class Button extends PureComponent {
     disableAnimationDuration: PropTypes.number,
 
     payload: PropTypes.any,
-    useNativeDriver: PropTypes.bool.isRequired,
+    // useNativeDriver: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -79,7 +79,7 @@ export default class Button extends PureComponent {
   }
 
   onPress() {
-    let { onPress, payload, useNativeDriver } = this.props;
+    let { onPress, payload } = this.props;
 
     if ('function' === typeof onPress) {
       onPress(payload);
@@ -95,7 +95,7 @@ export default class Button extends PureComponent {
         toValue: focused? 1 : 0,
         duration: focusAnimationDuration,
         easing: Easing.out(Easing.ease),
-        useNativeDriver,
+        // useNativeDriver,
       })
       .start();
   }
