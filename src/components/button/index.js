@@ -23,7 +23,7 @@ export default class Button extends PureComponent {
     disableAnimationDuration: 225,
 
     disabled: false,
-    useNativeDriver: false,
+    useNativeDriver: true,
   };
 
   static propTypes = {
